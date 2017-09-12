@@ -40,7 +40,7 @@
 }
 
 /**
- *  golbal
+ *  Golbal
  */
 html {
     font: 300 16px/1.8 -apple-system, PingFang SC, Verdana, Helvetica Neue, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
@@ -73,6 +73,48 @@ a:hover {
     @apply --white-link-hover;
 }
 
+/**
+ *  Golbal: tooltip
+ */
+.tooltip {
+    position: relative;
+    width: 100%;
+    cursor: pointer
+}
+
+.tooltip:hover:after,.tooltip:hover:before {
+    transition: opacity 1s ease;
+    opacity: 1
+}
+
+.tooltip:after {
+    position: absolute;
+
+    content: attr(data-tooltip);
+
+    left: -65px;
+    bottom: 35px;
+
+    padding: 10px;
+
+    width: 200px;
+
+    color: #fff;
+
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: center;
+
+    color: rgba(255, 255, 255, .7);
+    background-color: rgba(50, 50, 50, 1);
+
+    border-radius: 2px;
+    opacity: 0;
+}
+
+/**
+ *  Header
+ */
 .header {
     display: flex;
     flex-direction: column;
@@ -107,6 +149,9 @@ a:hover {
     font-weight: 300;
 }
 
+/**
+ *  Navigate
+ */
 .navigate {
     margin-top: 20px;
 }
@@ -116,6 +161,9 @@ a:hover {
     font-weight: inherit;
 }
 
+/**
+ *  Cotact
+ */
 .contact {
     display: flex;
     flex-direction: row;
@@ -170,40 +218,4 @@ a:hover {
 }
 .contact li span.about {
     background-image: url( '../icons/about.png' );
-}
-
-.tooltip {
-    position: relative;
-    width: 100%;
-    cursor: pointer
-}
-
-.tooltip:hover:after,.tooltip:hover:before {
-    transition: opacity 1s ease;
-    opacity: 1
-}
-
-.tooltip:after {
-    position: absolute;
-
-    content: attr(data-tooltip);
-
-    left: -65px;
-    bottom: 35px;
-
-    padding: 10px;
-
-    width: 200px;
-
-    color: #fff;
-
-    font-size: 1.2rem;
-    font-weight: 300;
-    text-align: center;
-
-    color: rgba(255, 255, 255, .7);
-    background-color: rgba(50, 50, 50, 1);
-
-    border-radius: 2px;
-    opacity: 0;
 }
