@@ -1,0 +1,209 @@
+
+/**
+ *  root
+ */
+:root {
+    --text-color: #333;
+    --text-secondary-color: #333;
+
+    --background-color: #fff;
+    --secondary-color: color(#333 alpha(-30%));
+
+    --padding-bottom: 10px;
+
+    --white-link: {
+        padding-bottom: 5px;
+
+        font-size: 1.3rem;
+        font-weight: 500;
+
+        color: var(--text-secondary-color);
+        text-decoration: none;
+
+        transition: border-color .5s;
+        border-bottom: 2px solid transparent;
+    }
+
+    --white-link-hover: {
+        color: color( var(--text-secondary-color) alpha(-10%));
+        border-bottom: 2px solid var(--text-secondary-color);
+    }
+
+    --background: {
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/**
+ *  golbal
+ */
+html {
+    font: 300 16px/1.8 -apple-system, PingFang SC, Verdana, Helvetica Neue, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+    font-size: 62.5%;
+
+    color: var(--text-color);
+    background: var(--background-color);
+
+    text-rendering: optimizelegibility;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+a {
+    @apply --white-link;
+    font-size: inherit;
+}
+
+a:hover {
+    @apply --white-link-hover;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.header h1 span {
+    font-weight: 300;
+}
+
+.header .avatar {
+    display: block;
+
+    margin-top: 150px;
+
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+
+    @apply --background;
+    background-image: url( '../icons/avatar.jpg' );
+}
+
+.header .desc {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.navigate {
+    margin-top: 20px;
+}
+
+.navigate a {
+    font-size: 1.5rem;
+    font-weight: inherit;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin-top: 20px;
+
+    list-style: none;
+}
+
+.contact li {
+    padding-left: 25px;
+}
+
+.contact li:last-child {
+    padding-right: 25px;
+}
+
+.contact li span {
+    display: block;
+
+    width: 24px;
+    height: 24px;
+
+    @apply --background;
+
+    opacity: .5;
+    transition: opacity .5s;
+}
+
+.contact li span:hover {
+    opacity: 1;
+}
+
+.contact li span.github {
+    background-image: url( '../icons/github.png' );
+}
+.contact li span.twitter {
+    background-image: url( '../icons/twitter.png' );
+}
+.contact li span.weibo {
+    background-image: url( '../icons/weibo.png' );
+}
+.contact li span.douban {
+    background-image: url( '../icons/douban.png' );
+}
+.contact li span.zhihu {
+    background-image: url( '../icons/zhihu.png' );
+}
+.contact li span.jianshu {
+    background-image: url( '../icons/jianshu.png' );
+}
+.contact li span.about {
+    background-image: url( '../icons/about.png' );
+}
+
+.tooltip {
+    position: relative;
+    width: 100%;
+    cursor: pointer
+}
+
+.tooltip:hover:after,.tooltip:hover:before {
+    transition: opacity 1s ease;
+    opacity: 1
+}
+
+.tooltip:after {
+    position: absolute;
+
+    content: attr(data-tooltip);
+
+    left: -65px;
+    bottom: 35px;
+
+    padding: 10px;
+
+    width: 200px;
+
+    color: #fff;
+
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: center;
+
+    color: rgba(255, 255, 255, .7);
+    background-color: rgba(50, 50, 50, 1);
+
+    border-radius: 2px;
+    opacity: 0;
+}
