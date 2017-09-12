@@ -30,13 +30,20 @@ const ExtractTextPlugin = require( 'extract-text-webpack-plugin' ),
 
     // html plugin
     hmr = ( function () {
-      !isProduction() && plugins.push(
-        new HtmlWebpackPlugin({
-          filename: 'index.html',
-          template: './src/index.html',
-          inject  : false,
-        })
-      );
+        !isProduction() && plugins.push(
+          new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: './src/index.html',
+            inject  : false,
+          })
+        );
+        !isProduction() && plugins.push(
+          new HtmlWebpackPlugin({
+            filename: 'project.html',
+            template: './src/project.html',
+            inject  : false,
+          })
+        );
     })(),
 
     // only when environment variable is 'production' call
@@ -59,6 +66,7 @@ const ExtractTextPlugin = require( 'extract-text-webpack-plugin' ),
         plugins.push(
           new CopyWebpackPlugin([
             { from   : 'src/index.html',      to   : '../' },
+            { from   : 'src/project.html',    to   : '../' },
             { context: 'src/assets/favicon/', from : "*" , to : '../assets/favicon' },
             { context: 'src/assets/images/',  from : "*" , to : '../assets/images' },
           ])

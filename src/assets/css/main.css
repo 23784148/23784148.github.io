@@ -11,6 +11,8 @@
 
     --padding-bottom: 10px;
 
+    --margin-top: 20px;
+
     --white-link: {
         padding-bottom: 5px;
 
@@ -153,7 +155,7 @@ a:hover {
  *  Navigate
  */
 .navigate {
-    margin-top: 20px;
+    margin-top: var(--margin-top);
 }
 
 .navigate a {
@@ -169,7 +171,7 @@ a:hover {
     flex-direction: row;
     justify-content: center;
 
-    margin-top: 20px;
+    margin-top: var(--margin-top);
 
     list-style: none;
 }
@@ -218,4 +220,80 @@ a:hover {
 }
 .contact li span.about {
     background-image: url( '../icons/about.png' );
+}
+
+/**
+ *  Project
+ */
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects .project {
+    margin-top: var(--margin-top);
+    max-width: 900px;
+}
+
+.projects .project .banner {
+    display: inline-block;
+    position: relative;
+
+    width: 800px;
+    height: 310px;
+
+    cursor: pointer;
+    vertical-align: top;
+    overflow: hidden;
+
+    border: 5px solid #fff;
+    box-shadow: 0 0 5px #ddd;
+}
+
+.projects .project .banner img {
+    transition: all 0.5s linear;
+    transform: scale3d(1, 1, 1);
+}
+
+.projects .project .banner img:hover {
+    transform: scale3d(1.2, 1.2, 1);
+}
+
+.projects .project .desc {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.projects .project .tags {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    list-style: none;
+}
+
+.projects .project .tags li {
+    margin: 4px;
+    padding: 0 12px;
+
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 25px;
+
+    color: inherit;
+    background-color: rgb(224, 224, 224);
+
+    border-radius: 16px;
+}
+
+.projects .project .tags li a {
+    border-bottom: none;
+    transition: all .5s;
+}
+
+.projects .project .tags li a:hover {
+    color: var(--background-color);
+    border-bottom: none;
 }
