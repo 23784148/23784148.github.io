@@ -297,3 +297,10 @@ a:hover {
     color: var(--background-color);
     border-bottom: none;
 }
+
+/**
+ *  Footer
+ */
+.footer {
+    margin: var(--margin-top) 0;
+}
