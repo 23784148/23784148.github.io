@@ -110,6 +110,7 @@ a:hover {
     color: rgba(255, 255, 255, .7);
     background-color: rgba(50, 50, 50, 1);
 
+    pointer-events: none;
     border-radius: 2px;
     opacity: 0;
 }
@@ -319,6 +320,20 @@ a:hover {
 
     text-align: left;
     border-left: 4px solid #42b983;
+}
+
+.about .article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.about .article a {
+    padding-bottom: 1px;
+
+    font-size: 1.4rem;
+    font-weight: normal;
+    line-height: 2;
 }
 
 /**
