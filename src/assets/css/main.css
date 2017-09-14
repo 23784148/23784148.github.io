@@ -355,8 +355,9 @@ a:hover {
         margin: 10px;
     }
 
-    b {
-        font-size: initial;
+    b, a {
+        font-size: inherit;
+        font-weight: 400;
     }
 
     .header .avatar {
