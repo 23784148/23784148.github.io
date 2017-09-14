@@ -355,6 +355,10 @@ a:hover {
         margin: 10px;
     }
 
+    b {
+        font-size: initial;
+    }
+
     .header .avatar {
         margin-top: 10px;
     }
