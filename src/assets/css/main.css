@@ -342,3 +342,43 @@ a:hover {
 .footer {
     margin: var(--margin-top) 0;
 }
+
+/**
+ *  Mobile
+ */
+@media (min-width: 320px) and (max-width: 767px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        margin: 10px;
+    }
+
+    .header .avatar {
+        margin-top: 10px;
+    }
+
+    .projects {
+        zoom: .5;
+    }
+
+    .about {
+        zoom: .5;
+    }
+
+    .about img {
+        zoom: .9;
+    }
+
+    .header,
+    .about .introduce {
+        zoom: .7;
+    }
+}
+
+@media (min-width:768px) and (max-width: 1023px) {
+    body {
+        zoom: .9;
+    }
+}
