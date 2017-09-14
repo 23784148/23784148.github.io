@@ -219,8 +219,8 @@ a:hover {
 .contact li span.jianshu {
     background-image: url( '../icons/jianshu.png' );
 }
-.contact li span.about {
-    background-image: url( '../icons/about.png' );
+.contact li span.more {
+    background-image: url( '../icons/more.png' );
 }
 
 /**
